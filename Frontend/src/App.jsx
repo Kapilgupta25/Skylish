@@ -108,7 +108,7 @@ export default function App() {
             type="submit"
             className="
               w-full py-3 rounded-xl text-lg font-semibold text-white
-              bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+              bg-blue-500
               hover:opacity-90 hover:scale-[1.02]
               transition-all
             "
