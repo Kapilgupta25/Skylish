@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import bgImage from "./assets/bgSkylish.jpeg";
 
 export default function App() {
   const [form, setForm] = useState({
@@ -32,21 +33,28 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-4">
+    <div
+      className="min-h-screen flex items-center justify-center px-4 bg-cover bg-center bg-no-repeat relative"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* CARD */}
-      <div className="max-w-md w-full bg-gradient-to-br from-gray-900 via-gray-600 to-gray-700 rounded-2xl shadow-2xl p-8">
+      <div className="relative z-10 max-w-md w-full bg-gradient-to-br from-gray-800 via-gray-600 to-gray-700 rounded-2xl shadow-2xl p-8">
 
         {/* TITLE */}
         <h1 className="text-3xl text-center font-bold text-white mb-2">
-          Skylish for you
+          Skylish for You
         </h1>
 
+        <p className="text-center text-gray-300 mb-6">
+          We'd love to hear from you
+        </p>
+
         {/* FORM */}
-        <form
-          onSubmit={handleSubmit}
-          className="rounded-2xl text-white p-8 space-y-5"
-        >
+        <form onSubmit={handleSubmit} className="space-y-5">
+
           <input
             type="text"
             name="name"
@@ -54,7 +62,13 @@ export default function App() {
             value={form.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-400 focus:outline-none"
+            className="
+              w-full px-4 py-3 rounded-xl
+              bg-gray-900 text-white
+              border border-gray-600
+              placeholder-gray-400
+              focus:outline-none focus:ring-2 focus:ring-purple-500
+            "
           />
 
           <input
@@ -64,7 +78,13 @@ export default function App() {
             value={form.mobile}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-400 focus:outline-none"
+            className="
+              w-full px-4 py-3 rounded-xl
+              bg-gray-900 text-white
+              border border-gray-600
+              placeholder-gray-400
+              focus:outline-none focus:ring-2 focus:ring-purple-500
+            "
           />
 
           <input
@@ -74,16 +94,23 @@ export default function App() {
             value={form.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-400 focus:outline-none"
+            className="
+              w-full px-4 py-3 rounded-xl
+              bg-gray-900 text-white
+              border border-gray-600
+              placeholder-gray-400
+              focus:outline-none focus:ring-2 focus:ring-purple-500
+            "
           />
 
           {/* SUBMIT BUTTON */}
           <button
             type="submit"
             className="
-              w-full py-3 rounded-xl text-xl text-white font-semibold
-              bg-blue-500
-              hover:scale-[1.02] transition-transform
+              w-full py-3 rounded-xl text-lg font-semibold text-white
+              bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+              hover:opacity-90 hover:scale-[1.02]
+              transition-all
             "
           >
             Submit
