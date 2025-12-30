@@ -9,9 +9,6 @@ All submitted data is stored securely and updated **live in Google Sheets**.
 
 🔗 **Deployed Website:**  
 👉 https://skylish.vercel.app/
-
-> Replace the link above with your actual Vercel deployment URL.
-
 ---
 
 ## 🚀 Features
