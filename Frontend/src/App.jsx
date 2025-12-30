@@ -33,27 +33,19 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-4">
-      
-      {/* COLORFUL CARD */}
-      <div className="
-        w-full max-w-md
-        bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-400
-        rounded-3xl shadow-2xl p-8
-      ">
+
+      {/* CARD */}
+      <div className="max-w-md w-full bg-gradient-to-br from-gray-900 via-gray-600 to-gray-700 rounded-2xl shadow-2xl p-8">
 
         {/* TITLE */}
-        <h1 className="text-3xl font-bold text-white text-center mb-2">
-          Get in Touch
+        <h1 className="text-3xl text-center font-bold text-white mb-2">
+          Skylish for you
         </h1>
-
-        <p className="text-white/80 text-center mb-8">
-          We'd love to hear from you
-        </p>
 
         {/* FORM */}
         <form
           onSubmit={handleSubmit}
-          className="bg-white rounded-2xl p-6 space-y-5"
+          className="rounded-2xl text-white p-8 space-y-5"
         >
           <input
             type="text"
@@ -89,8 +81,8 @@ export default function App() {
           <button
             type="submit"
             className="
-              w-full py-3 rounded-xl text-white font-semibold
-              bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+              w-full py-3 rounded-xl text-xl text-white font-semibold
+              bg-blue-500
               hover:scale-[1.02] transition-transform
             "
           >
