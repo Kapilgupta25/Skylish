@@ -1,16 +1,101 @@
-# React + Vite
+# 🌐 Get In Touch – Contact Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **Get In Touch** website that allows users to easily connect with us by submitting their **name, mobile number, and email address**.  
+All submitted data is stored securely and updated **live in Google Sheets**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## React Compiler
+🔗 **Deployed Website:**  
+👉 https://skylish.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Replace the link above with your actual Vercel deployment URL.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+- 📱 Fully responsive (mobile & desktop)
+- 🎨 Clean and modern UI using Tailwind CSS
+- 🖼️ Full-screen background with dark overlay
+- 🧾 Simple contact form (Name, Mobile, Email)
+- ☁️ Google Sheets integration (no backend server needed)
+- ⚡ Built with React + Vite
+- 🔒 Secure & spam-free data collection
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React (Vite)
+- **Styling:** Tailwind CSS
+- **Backend:** Google Apps Script
+- **Database:** Google Sheets
+- **Deployment:** Vercel
+
+---
+
+## 📝 How It Works
+
+1. User enters:
+   - Full Name
+   - Mobile Number
+   - Email Address
+2. On submission:
+   - Data is sent via POST request
+   - Google Apps Script receives the data
+   - Data is appended to a connected Google Sheet with timestamp
+3. User gets a success confirmation message
+
+---
+
+## 📂 Project Structure
+
+Frontend/
+├── src/
+│ ├── assets/
+│ │ └── bg.jpg
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css
+├── public/
+├── package.json
+├── vite.config.js
+└── index.html
+
+
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd Frontend
+
+npm install
+
+npm run dev
+
+```
+
+
+
+☁️ Google Sheets Setup
+
+Create a Google Sheet with columns:
+
+Name | Mobile | Email | Timestamp
+
+
+Create a Google Apps Script Web App
+
+Deploy settings:
+
+Execute as: Me
+
+Who has access: Anyone
+
+Use the generated /exec URL in the frontend
